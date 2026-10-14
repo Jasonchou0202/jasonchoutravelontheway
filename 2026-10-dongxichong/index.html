@@ -1,0 +1,302 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>东西涌穿越：挺过去，就是海 · 我的游记</title>
+<style>
+:root{--sea:#0d6b87;--sea2:#1f9aa8;--ink:#17232b;--sand:#f5f0e6;--paper:#fffdf8;--muted:#6f7c85;--coral:#e8734a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;color:var(--ink);background:var(--sand);line-height:1.9;font-size:17px;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Songti SC","STSong","Noto Serif CJK SC","Source Han Serif SC",serif}
+img{display:block;max-width:100%}
+[data-lb]{cursor:zoom-in}
+/* HERO */
+.hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;overflow:hidden;color:#fff;background:#0b3a4a}
+.hero .bg{position:absolute;inset:-40px;background:url(images/01-bay.jpg) center/cover;filter:blur(18px) brightness(.55) saturate(1.2);transform:scale(1.05)}
+.hero .txt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:8vh 5vw 8vh 7vw}
+.hero .photo{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;padding:6vh 6vw 6vh 0}
+.hero .photo img{height:86vh;width:auto;max-width:100%;object-fit:cover;border-radius:6px;box-shadow:0 30px 80px rgba(0,0,0,.5);transform:rotate(1.5deg)}
+.kicker{font-size:13px;letter-spacing:.35em;opacity:.85;text-transform:uppercase}
+.hero h1{font-size:clamp(40px,5.2vw,88px);line-height:1.08;margin:.25em 0 .3em;font-weight:900;letter-spacing:.02em}
+.hero h1 em{font-style:normal;white-space:nowrap;color:#ffd38a}
+.hero .sub{font-size:clamp(17px,1.5vw,21px);opacity:.9;max-width:30em;margin:0 0 2em}
+.hero .mini{display:grid;grid-template-columns:repeat(3,auto);gap:10px 34px;justify-content:start}
+.hero .mini div{border-left:2px solid rgba(255,255,255,.4);padding-left:12px}
+.hero .mini b{display:block;font-size:12px;opacity:.7;font-weight:400;letter-spacing:.15em}
+.hero .mini span{font-size:20px;font-weight:700}
+.back{position:absolute;z-index:5;top:20px;left:24px;color:#fff;text-decoration:none;font-size:14px;background:rgba(0,0,0,.3);padding:6px 14px;border-radius:99px;backdrop-filter:blur(6px)}
+.scroll{position:absolute;z-index:3;bottom:22px;left:7vw;font-size:12px;letter-spacing:.3em;opacity:.7}
+/* STATS */
+.stats{max-width:1180px;margin:0 auto;padding:46px 24px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:transparent}
+.stat{background:var(--paper);padding:20px 22px;border-top:3px solid var(--sea)}
+.stat b{display:block;font-size:12px;color:var(--muted);font-weight:500;letter-spacing:.15em}.stat span{font-size:19px;font-weight:800}
+.stat small{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin-top:2px}
+/* LAYOUT */
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+.wide{max-width:1180px;margin:0 auto;padding:0 24px}
+section.ch{margin-top:110px;margin-bottom:110px}
+.chap{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.chap .no{font-size:64px;font-weight:900;color:transparent;-webkit-text-stroke:1.5px var(--sea);line-height:1}
+.chap .when{color:var(--sea);font-weight:700;letter-spacing:.2em;font-size:13px}
+h2{font-size:clamp(28px,3.4vw,42px);line-height:1.25;margin:.1em 0 .6em;font-weight:900}
+p{margin:0 0 1.1em}
+.lead{font-size:20px;line-height:2}
+.lead::first-letter{font-size:3.2em;float:left;line-height:1;margin:.08em .12em 0 0;color:var(--sea);font-weight:900}
+figure{margin:0}figcaption{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.6}
+.ph img{width:100%;height:100%;object-fit:cover;border-radius:4px}
+.bleed{position:relative;margin:70px 0}.bleed img{width:100%;height:82vh;min-height:420px;object-fit:cover}
+.bleed .cap{position:absolute;left:0;right:0;bottom:0;padding:80px 7vw 34px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.6))}
+.bleed .cap h2{margin:0;color:#fff}.bleed .cap p{margin:.3em 0 0;opacity:.9}
+.split{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+.split.rev{grid-template-columns:1fr 1.25fr}.split.rev .ph{order:2}
+.split.tall{grid-template-columns:.8fr 1fr}
+.split .ph img{max-height:84vh}
+.mosaic{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:90px;gap:12px;margin-top:34px}
+.m-a{grid-column:1/4;grid-row:span 7}.m-b{grid-column:4/7;grid-row:span 4}.m-c{grid-column:4/7;grid-row:span 3}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}.trio .ph img{aspect-ratio:3/4}
+.trio .ph:nth-child(2){transform:translateY(40px)}
+.note{background:#e3eff2;border-left:4px solid var(--sea);padding:14px 18px;border-radius:4px;font-size:14px;color:#2b4b57;line-height:1.75}
+.pols{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin:40px 0 10px}
+.pol{background:#fff;padding:14px 14px 50px;box-shadow:0 18px 40px rgba(0,0,0,.18);width:min(320px,82vw);position:relative}
+.pol img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#fff}
+.pol figcaption{position:absolute;left:0;right:0;bottom:14px;text-align:center;font-size:15px;color:#555}
+.pol.l{transform:rotate(-4deg)}.pol.r{transform:rotate(3.5deg);margin-top:40px}
+.pol.r img{object-position:center 40%}
+.story{background:var(--paper);border-radius:4px;padding:44px 48px;position:relative;box-shadow:0 10px 40px rgba(0,0,0,.05)}
+.story::before{content:"“";position:absolute;top:-30px;left:30px;font-size:120px;line-height:1;color:var(--coral);font-family:Georgia,serif}
+.story .tag{display:inline-block;background:var(--coral);color:#fff;font-size:12px;letter-spacing:.2em;padding:3px 12px;border-radius:99px;margin-bottom:12px}
+.quote{position:relative;margin:100px 0;color:#fff;text-align:center}
+.quote img{width:100%;height:90vh;min-height:480px;object-fit:cover;object-position:center 40%;filter:brightness(.6)}
+.quote blockquote{position:absolute;inset:0;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 8vw}
+.quote blockquote p{font-size:clamp(28px,4.4vw,60px);line-height:1.35;font-weight:900;margin:0;text-shadow:0 4px 30px rgba(0,0,0,.4)}
+.quote blockquote small{margin-top:22px;letter-spacing:.3em;opacity:.85;font-size:13px}
+.route{background:var(--paper);border-radius:4px;padding:26px;margin-top:40px;box-shadow:0 10px 40px rgba(0,0,0,.05)}
+.route svg{width:100%;height:auto;display:block}
+.tips{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:24px}
+.tip{background:var(--paper);padding:20px 22px;border-radius:4px;font-size:15px;line-height:1.7}.tip b{display:block;font-size:17px;margin-bottom:4px}
+.tip .i{font-size:26px}
+.video{position:relative;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#000;margin:30px 0}.video video,.video iframe{width:100%;height:100%;border:0}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:60px 20px 70px;line-height:2}footer a{color:var(--sea)}
+/* reveal */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .9s ease,transform .9s ease}.rv.in{opacity:1;transform:none}
+.pol.l.rv{transform:rotate(-4deg) translateY(36px)}.pol.l.rv.in{transform:rotate(-4deg)}
+.pol.r.rv{transform:rotate(3.5deg) translateY(36px)}.pol.r.rv.in{transform:rotate(3.5deg)}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important;transition:none}}
+/* lightbox */
+#lb{position:fixed;inset:0;background:rgba(8,14,18,.94);display:none;align-items:center;justify-content:center;z-index:99;cursor:zoom-out}#lb.on{display:flex}
+#lb img{max-width:94vw;max-height:88vh;border-radius:4px}#lb p{position:absolute;bottom:14px;color:#ccc;font-size:14px;width:100%;text-align:center;padding:0 20px}
+#lb .x{position:absolute;top:12px;right:22px;color:#fff;font-size:36px}
+@media(max-width:900px){
+ body{font-size:16px}
+ .hero{display:block;min-height:0}
+ .hero .bg{display:none}
+ .hero .photo{padding:0;display:block}
+ .hero .photo img{height:100svh;min-height:600px;width:100%;border-radius:0;transform:none;object-position:center 30%;box-shadow:none}
+ .hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),transparent 30%,transparent 50%,rgba(0,0,0,.88) 85%)}
+ .hero .txt{position:absolute;z-index:4;left:0;right:0;bottom:0;padding:0 22px 40px}
+ .hero h1{font-size:40px}.hero .sub{margin-bottom:1.2em;font-size:15px;line-height:1.7}
+ .hero .mini{gap:8px 18px}.hero .mini span{font-size:16px}.scroll{display:none}
+ .stats{grid-template-columns:1fr 1fr;padding-top:24px}
+ section.ch{margin-top:72px;margin-bottom:72px}
+ .split,.split.rev,.split.tall{grid-template-columns:1fr;gap:22px}.split.rev .ph{order:0}
+ .mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:auto}.m-a{grid-column:1/3;grid-row:auto}.m-b,.m-c{grid-column:auto;grid-row:auto}.mosaic .ph img{aspect-ratio:3/4}.m-a img{aspect-ratio:4/5}
+ .trio{grid-template-columns:1fr 1fr}.trio .ph:nth-child(2){transform:none}.trio .ph:nth-child(3){grid-column:1/3}.trio .ph:nth-child(3) img{aspect-ratio:4/3}
+ .story{padding:34px 24px}
+ .pol.r{margin-top:0}
+ .bleed img{height:60vh}.quote img{height:75vh}
+ .chap .no{font-size:48px}
+}
+</style></head><body>
+
+<header class="hero">
+ <a class="back" href="../index.html">← 游记合集</a>
+ <div class="bg"></div>
+ <div class="txt">
+  <div class="kicker">深圳 · 大鹏半岛 · 2026.10.11</div>
+  <h1 class="serif">东西涌穿越<br><em>挺过去，就是海</em></h1>
+  <p class="sub">早上十点出发，下午三四点到西涌天文台，再坐游艇回东涌。一天下来晒得透透的，照片也拍够了。</p>
+  <div class="mini">
+   <div><b>距离</b><span>≈5.95 km</span></div>
+   <div><b>用时</b><span>5–6 h</span></div>
+   <div><b>强度</b><span>中等</span></div>
+  </div>
+ </div>
+ <div class="photo"><img src="images/06-cover.jpg" alt="在东西涌海岸线张开双臂" data-lb></div>
+ <div class="scroll">SCROLL ↓</div>
+</header>
+
+<section class="stats">
+ <div class="stat rv"><b>日期</b><span>2026.10.11 周日</span></div>
+ <div class="stat rv"><b>人数</b><span>4 人</span></div>
+ <div class="stat rv"><b>路线</b><span>东涌 → 西涌天文台</span></div>
+ <div class="stat rv"><b>用时</b><span>约 5–6 小时</span><small>10:00 出发 → 15:00/16:00 到达</small></div>
+ <div class="stat rv"><b>距离</b><span>约 5.95 km</span><small>据途中 No.09 路牌推算</small></div>
+ <div class="stat rv"><b>强度</b><span>中等 ★★★</span></div>
+ <div class="stat rv"><b>天气</b><span>☀️ 大晴天</span></div>
+ <div class="stat rv"><b>返程</b><span>🚤 游艇回东涌</span></div>
+</section>
+
+<main>
+<section class="ch wrap">
+ <p class="lead rv">最近我大概每周、最多十天就要往户外跑一趟。深圳的网红山已经打卡了五六座，国庆前 9 月 30 号还去爬了趟武功山——好吧，我承认，我入坑了。山爬得差不多，这次换个口味走徒步路线，一上来就挑了深圳的顶流：东西涌穿越。</p>
+ <p class="rv">前一天照着攻略做功课，攻略里的高频词只有一个：<b>暴晒</b>。于是防晒衣、防晒霜安排上，水、饮料、零食备齐，四个人整整齐齐出发。先说一句：以下全是原片，没滤镜，海就是这么蓝。</p>
+ <div class="route rv">
+  <svg viewBox="0 0 900 380" role="img" aria-label="东西涌穿越路线示意图">
+   <defs><filter id="rough"><feTurbulence baseFrequency=".03" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/></filter></defs>
+   <rect width="900" height="380" fill="#fffdf8"/>
+   <path d="M0 250 C120 230 170 300 260 280 S420 330 520 300 S700 320 780 290 S880 300 900 280 L900 380 L0 380Z" fill="#cfe7ec"/>
+   <path d="M0 250 C120 230 170 300 260 280 S420 330 520 300 S700 320 780 290 S880 300 900 280" fill="none" stroke="#8ab9c4" stroke-width="2" filter="url(#rough)"/>
+   <path d="M60 150 l40 -50 l35 40 l30 -60 l45 70" fill="none" stroke="#9db58a" stroke-width="2" filter="url(#rough)"/>
+   <path d="M560 160 l40 -60 l40 50 l35 -40 l40 60" fill="none" stroke="#9db58a" stroke-width="2" filter="url(#rough)"/>
+   <!-- trail: drawn right(东涌) to left(西涌) to match map orientation (西在左) -->
+   <path id="trail" d="M800 250 C760 230 720 250 690 235 S620 215 590 240 S520 270 470 250 S400 220 360 240 S280 255 240 235 S160 220 120 240" fill="none" stroke="#e8734a" stroke-width="4" stroke-linecap="round" filter="url(#rough)"/>
+   <path d="M120 262 C250 330 600 345 800 272" fill="none" stroke="#0d6b87" stroke-width="2.5" stroke-dasharray="8 8"/>
+   <text x="430" y="352" font-size="15" fill="#0d6b87" text-anchor="middle">🚤 游艇返回东涌</text>
+   <g font-size="15" fill="#17232b" text-anchor="middle">
+    <circle cx="800" cy="250" r="9" fill="#e8734a"/><text x="800" y="215" font-weight="700">东涌 · 起点</text><text x="800" y="196" fill="#e8734a" font-size="13">10:00</text>
+    <circle cx="690" cy="235" r="6" fill="#fff" stroke="#e8734a" stroke-width="3"/><text x="690" y="200">穿鼻岩</text>
+    <circle cx="530" cy="262" r="6" fill="#fff" stroke="#e8734a" stroke-width="3"/><text x="530" y="300" font-size="13">乱石滩 · 铁链攀岩段</text>
+    <circle cx="380" cy="234" r="6" fill="#fff" stroke="#e8734a" stroke-width="3"/><text x="380" y="200">No.09 路牌</text>
+    <circle cx="120" cy="240" r="9" fill="#0d6b87"/><text x="120" y="205" font-weight="700">西涌天文台 · 终点</text><text x="120" y="186" fill="#0d6b87" font-size="13">15:00–16:00</text>
+   </g>
+   <text x="880" y="30" font-size="12" fill="#6f7c85" text-anchor="end">示意图，非比例 · N↑</text>
+  </svg>
+ </div>
+</section>
+
+<section class="bleed rv">
+ <img src="images/01-bay.jpg" alt="东涌海湾" data-lb loading="lazy">
+ <div class="cap"><div class="chap"><span class="when" style="color:#ffd38a">01 · 10:00 · 东涌出发</span></div><h2 class="serif">还没正式开走，就先拍了一轮</h2><p>往上走一小段，回头就是这个画面：白沙滩、小村屋、一整湾透明的绿。</p></div>
+</section>
+
+<section class="ch wide">
+ <div class="split">
+  <figure class="ph rv"><img src="images/02-chuanbiyan.jpg" alt="穿鼻岩" data-lb loading="lazy"><figcaption>穿鼻岩：海浪不知道冲了多少年，冲出来这么个现成的拍照框</figcaption></figure>
+  <div class="rv">
+   <div class="chap"><span class="no">02</span><span class="when">打卡 · 穿鼻岩</span></div>
+   <h2 class="serif">深圳版“圣象天门”</h2>
+   <p>中途专门绕去了网红点：山岬上被海浪硬生生冲出来的一个大洞。我一直以为它叫“橡皮岩”，回来一查才知道正名叫<b>穿鼻岩</b>，因为洞口像鼻孔，还有个外号叫“生命之门”。来回大概两公里，就为了这一张。</p>
+   <p class="note">📖 参考资料：穿鼻岩是海蚀拱洞，高约 18 米、宽 9 米、深 46 米，在东涌沙滩东北侧约 500 米的海角。观景台附近落石多，别翻围栏凑近洞口；涨潮时走沙滩那条线可能过不去。</p>
+  </div>
+ </div>
+</section>
+
+<section class="ch wrap">
+ <div class="chap rv"><span class="no">03</span><span class="when">沿途 · 彩字牌</span></div>
+ <h2 class="serif rv">“东西涌”三个字，不拍等于白来</h2>
+ <p class="rv">海边插着好几块彩色的“东西涌”字牌。队友直接爬上大石头摆 pose，我站在“祖国万岁 · 东西涌”的牌子下面，拍了张标准游客照。</p>
+ <div class="pols">
+  <figure class="pol l rv"><img src="images/07-polaroid.jpg" alt="队友站在海边大岩石上" data-lb loading="lazy"><figcaption class="serif">站得高，拍得斜</figcaption></figure>
+  <figure class="pol r rv"><img src="images/11-slogan.jpg" alt="在祖国万岁东西涌字牌下" data-lb loading="lazy"><figcaption class="serif">标准游客照 ✓</figcaption></figure>
+ </div>
+</section>
+
+<section class="ch wide">
+ <div class="split rev tall">
+  <figure class="ph rv"><img src="images/08-signpost.jpg" alt="No.09 路牌" data-lb loading="lazy"><figcaption>No.09 路牌：比导航还靠谱的进度条</figcaption></figure>
+  <div class="rv">
+   <div class="chap"><span class="no">04</span><span class="when">半路 · 进度条</span></div>
+   <h2 class="serif">一根路牌，把账算得明明白白</h2>
+   <p>半路碰到一根很贴心的路牌 <b>No.09</b>：往西涌 3430 米，约 2 小时 05 分；往东涌 2520 米，约 1 小时 10 分。两边一加，<b>全程约 5.95 公里</b>。</p>
+   <p>路牌最底下还写着四个字：<b>无痕山野</b>。意思是：风景随便拍，垃圾自己带走。</p>
+  </div>
+ </div>
+</section>
+
+<section class="ch wide">
+ <div class="wrap" style="padding:0">
+  <div class="chap rv"><span class="no">05</span><span class="when">海岸线 · 原生态路段</span></div>
+  <h2 class="serif rv">手脚并用，边爬边拍</h2>
+  <p class="rv">这条线主打一个原生态：没有整齐的台阶，只有乱石滩、礁石和峭壁。大部分时间在石头上找落脚点，陡的地方就拉着铁链下坡，还要从两块巨石中间的缝里钻过去。运动量说大不大，但手和脚一个都闲不下来。</p>
+ </div>
+ <div class="trio">
+  <figure class="ph rv"><img src="images/03-rocks.jpg" alt="乱石滩" data-lb loading="lazy"><figcaption>乱石滩：每一步都得先挑落脚点</figcaption></figure>
+  <figure class="ph rv"><img src="images/04-chain.jpg" alt="拉铁链下坡" data-lb loading="lazy"><figcaption>树林里拉铁链下坡</figcaption></figure>
+  <figure class="ph rv"><img src="images/13-crack.jpg" alt="巨石狭缝" data-lb loading="lazy"><figcaption>石缝尽头，露出来一小条海</figcaption></figure>
+ </div>
+</section>
+
+<section class="ch wide">
+ <div class="wrap" style="padding:0">
+  <div class="chap rv"><span class="no">06</span><span class="when">趣事 · 铁链攀岩段</span></div>
+  <h2 class="serif rv">最陡的路，最好的秩序</h2>
+  <p class="rv">攀岩铁链那几段是真的陡，也是真的有点危险。网红路线人又多，岩壁上挂了一长串人排队。但让我挺意外的是，大家<b>特别守秩序</b>：没人推搡，没人抢道，前面的人回头拉一把，后面的人在底下扶一下。一条铁链上挂满了人，愣是排出了一种文明礼让的气质，必须点个赞。</p>
+ </div>
+ <div class="mosaic">
+  <figure class="ph m-a rv"><img src="images/09-queue.jpg" alt="一长串人拉铁链爬岩壁" data-lb loading="lazy"></figure>
+  <figure class="ph m-b rv"><img src="images/12-climb.jpg" alt="拉铁链向上爬" data-lb loading="lazy"></figure>
+  <figure class="ph m-c rv"><img src="images/10-sit-chain.jpg" alt="拉着铁链坐在岩石上笑" data-lb loading="lazy" style="object-position:center 30%"></figure>
+ </div>
+ <p class="wrap rv" style="font-size:13px;color:var(--muted);margin-top:12px;padding:0">岩壁上排队的人 · 从上往下拍才知道有多陡 · 累归累，我还笑得出来</p>
+</section>
+
+<section class="ch wrap">
+ <div class="story rv">
+  <span class="tag">趣事 · 广州团建团</span>
+  <h2 class="serif" style="margin-top:0">闺蜜：回去就跟她“分手”</h2>
+  <p>路上碰到一个从广州来的公司团建团。我们在一块岩石上歇脚的时候，旁边有个二十来岁的妹子，平时估计不怎么运动，心肺完全跟不上，累得不行。</p>
+  <p>她同事轮流给她打气，她闺蜜在旁边开玩笑：“好不容易把她拉出来徒步一次，回去估计要跟我闹掰、‘分手’了。”一圈人都笑了，然后一路互相开玩笑、一路鼓励，硬是陪着她把这段穿越走完了。</p>
+  <p style="margin:0">风景是一回事，路上碰到的这些人和事，有时候比风景还让人记得住。</p>
+ </div>
+</section>
+
+<section class="ch wide">
+ <div class="split">
+  <figure class="ph rv"><img src="images/05-gaze.jpg" alt="站在岩石上眺望大海" data-lb loading="lazy" style="max-height:80vh"><figcaption>随便找块石头一站，背后就是海天一线</figcaption></figure>
+  <div class="rv">
+   <div class="chap"><span class="no">07</span><span class="when">15:00–16:00 · 西涌天文台</span></div>
+   <h2 class="serif">走到天文台，坐游艇回东涌</h2>
+   <p>这一路真的太出片了，基本是走十分钟、拍五分钟的节奏，所以早上十点出发，下午三四点才晃到西涌天文台。</p>
+   <p>回程没走回头路，直接坐游艇回东涌。刚刚一步一步爬过的海岸线，坐船十几分钟就从眼前划过去了，心情有点复杂。</p>
+   <!-- 视频预留：<div class="video"><video src="videos/xxx.mp4" controls playsinline poster="images/xxx.jpg"></video></div> -->
+  </div>
+ </div>
+</section>
+
+<section class="quote rv">
+ <img src="images/06-cover.jpg" alt="" loading="lazy">
+ <blockquote><p class="serif">风景不会躺在家里等你，<br>它在你挺过去的那段路后面。</p><small>— 写给走完东西涌的自己</small></blockquote>
+</section>
+
+<section class="ch wrap">
+ <div class="chap rv"><span class="no">08</span><span class="when">小结</span></div>
+ <h2 class="serif rv">在路上，才能捡到的东西</h2>
+ <p class="rv">说实话，旅行也好，徒步也好，过程本身挺枯燥、挺单调的，有时候还很痛苦：晒、累、腿软，还得排队爬铁链。但只要挺过去，前面就有好风景等着，身边还会冒出来各种有趣的人和事，比如互相扶一把的路人，比如嚷着要“分手”的闺蜜。</p>
+ <p class="rv">很多道理，就是在路上一步一步走着走着才想明白的。这些灵感和美好，躺在家里怎么都得不到，只有真的走在路上，才能感受到这种快乐。</p>
+ <p class="rv">东西涌这条线：强度中等，风景满分，推荐。下一条去哪，已经在看了。</p>
+</section>
+
+<section class="ch wide">
+ <div class="split rev tall">
+  <figure class="ph rv"><img src="images/14-dinner.jpg" alt="铁板烧晚餐" data-lb loading="lazy" style="max-height:72vh"><figcaption>徒步的终点站：铁板烧</figcaption></figure>
+  <div class="rv">
+   <div class="chap"><span class="no">+1</span><span class="when">彩蛋</span></div>
+   <h2 class="serif">辛苦一天的奖励</h2>
+   <p>走了一天、晒了一天、爬了一天，收工当然要犒劳一下自己：铁板烧安排上。今天出的汗，靠这一顿全补回来了。</p>
+  </div>
+ </div>
+</section>
+
+<section class="ch wide">
+ <div class="chap rv"><span class="no">✓</span><span class="when">给下次 / 给朋友</span></div>
+ <h2 class="serif rv">小贴士</h2>
+ <div class="tips">
+  <div class="tip rv"><span class="i">🧴</span><b>防晒拉满</b>防晒衣、防晒霜、帽子、墨镜都带上，全程几乎没有遮挡。</div>
+  <div class="tip rv"><span class="i">💧</span><b>水带够</b>每人至少两瓶水，再带点能量零食。沿途补给点很简陋，东西可能卖完（参考攻略）。</div>
+  <div class="tip rv"><span class="i">🥾</span><b>穿抓地鞋</b>一路都是礁石和石头路，徒步鞋比普通运动鞋靠谱得多。</div>
+  <div class="tip rv"><span class="i">🧤</span><b>带手套</b>拉铁链、扒岩石都用得上。</div>
+  <div class="tip rv"><span class="i">⏰</span><b>留足时间</b>边走边拍，我们 10:00 出发，15:00–16:00 才到，别排太紧。</div>
+  <div class="tip rv"><span class="i">🤝</span><b>铁链段排队</b>周末人多，耐心排队、互相扶一把，安全第一。也别忘了“无痕山野”。</div>
+  <div class="tip rv"><span class="i">🌊</span><b>看潮汐</b>部分海边路段（包括去穿鼻岩的沙滩线）涨潮时可能过不去。</div>
+  <div class="tip rv"><span class="i">🚤</span><b>游艇返程</b>西涌那头有游艇/快艇，大多现场拼船，价格以现场为准（参考攻略）。</div>
+ </div>
+</section>
+</main>
+
+<footer>📍 东西涌穿越 · 2026.10.11 · 照片均为原片（只压缩了尺寸）<br>参考资料：<a href="https://www.dpxq.gov.cn/ztzl/pyxsj/wzdp/zjd/content/post_11584515.html">大鹏新区政府在线</a> · <a href="https://www.sznews.com/news/content/2025-09/18/content_31695509.htm">深圳新闻网</a><br><a href="../index.html">← 返回游记合集</a></footer>
+
+<div id="lb"><span class="x">×</span><img alt=""><p></p></div>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const lb=document.getElementById('lb'),li=lb.querySelector('img'),lp=lb.querySelector('p');
+document.querySelectorAll('[data-lb]').forEach(i=>i.addEventListener('click',()=>{li.src=i.src;const c=i.closest('figure');lp.textContent=(c&&c.querySelector('figcaption')?.textContent)||i.alt;lb.classList.add('on')}));
+lb.onclick=()=>lb.classList.remove('on');document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+</script></body></html>
